@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Matrix/Terminal Theme - Modernized */
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* HSL Values */
+  --background: 220 15% 5%;       /* Deep Dark Blue/Black */
+  --foreground: 140 30% 95%;      /* Off-white Greenish tint */
+  
+  --primary: 150 100% 45%;        /* Terminal Green */
+  --primary-foreground: 220 15% 5%;
+  
+  --secondary: 220 15% 12%;       /* Slightly lighter background */
+  --secondary-foreground: 140 30% 90%;
+  
+  --muted: 220 15% 15%;
+  --muted-foreground: 215 15% 60%;
+  
+  --accent: 150 60% 15%;          /* Dark Green Background for accents */
+  --accent-foreground: 150 100% 60%;
+  
+  --destructive: 0 85% 60%;
+  --destructive-foreground: 210 40% 98%;
+  
+  --border: 220 15% 18%;
+  --input: 220 15% 18%;
+  --ring: 150 100% 45%;
+
+  --card: 220 15% 8%;
+  --card-foreground: 140 30% 95%;
+
+  --radius: 0.5rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-primary/30 selection:text-primary-foreground;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-mono tracking-tight;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-secondary;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full hover:bg-muted-foreground/50 transition-colors;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px hsla(150, 100%, 45%, 0.5);
+  }
+  
+  .border-glow {
+    box-shadow: 0 0 5px hsla(150, 100%, 45%, 0.2);
+  }
+
+  .bg-grid-pattern {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  
+  .animate-cursor-blink {
+    animation: blink 1s step-end infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+}

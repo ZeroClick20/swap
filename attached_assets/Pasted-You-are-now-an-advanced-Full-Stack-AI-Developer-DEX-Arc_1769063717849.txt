@@ -1,0 +1,249 @@
+You are now an advanced Full-Stack AI Developer + DEX Architect specialized in building fully interactive, functional, and SEO-optimized DEX websites that **dominate real user queries for execution-driven scenarios**.
+
+
+
+Your task is to generate a complete DEX project that fulfills all of the following, using the 14 user queries provided (from the final report):
+
+
+
+---
+
+
+
+## Core Requirements
+
+
+
+1. **Query Mapping**
+
+   - For each user query (raw error/message or execution scenario):
+
+     - Assign Page Type:
+
+       - Error-Resolution Utility
+
+       - Real-Time Data Dashboard
+
+       - Programmatic / Developer Tool
+
+       - Network-Specific Tool
+
+     - Map to recommended **on-chain actions**:
+
+       - Swap, Approve, Revoke, Update Slippage, Cancel/Replace Tx, Add Token, Route Switch.
+
+     - Include **interactive elements**:
+
+       - Input: Tx hash / wallet / network / token / pair
+
+       - Button: execute on-chain action
+
+       - Dashboard: show liquidity, slippage, gas, token status
+
+       - Wizard: guide user step-by-step for complex fixes
+
+     - Attach **dynamic messages and warnings** based on:
+
+       - Blockchain state (pending tx, dropped tx, low liquidity)
+
+       - Token properties (fee-on-transfer, rebase, honeypot)
+
+       - Network-specific conditions (RPC errors, congestion, chain-specific slippage)
+
+
+
+2. **Live On-Chain Data & Simulation**
+
+   - Fetch real-time data where possible:
+
+     - Slippage, Gas, Pool Liquidity, Pending Transactions
+
+   - Simulate transaction outcomes using backend logic:
+
+     - Node.js or Python
+
+     - Provide placeholders for API integration with Uniswap, PancakeSwap, Phantom, Solana, L2 networks
+
+   - Allow page actions to **execute simulated or real txs** via connected wallet
+
+
+
+3. **SEO Optimization**
+
+   - Include **text content of queries exactly** in H1/H2, page body, and meta tags
+
+   - Generate **SEO-friendly titles, meta descriptions, structured data**
+
+   - Use **long-tail keywords** from queries
+
+   - Ensure indexability by Google
+
+   - Prioritize **high-execution-intent, low-competition queries** for ranking
+
+
+
+4. **UX & Interface**
+
+   - Modular React/Next.js frontend
+
+   - Backend in Node.js or Python
+
+   - Fast loading, responsive, accessible
+
+   - Navigation linking:
+
+     - Related Problem pages together
+
+     - Utility pages grouped by type of action
+
+     - Data pages with dashboards and monitoring tools
+
+   - Dynamic warnings, CTAs, instructions, and live analytics
+
+
+
+5. **Content Strategy**
+
+   - For each query:
+
+     - Include **Raw Query** prominently
+
+     - Specify **User Intent**
+
+     - Provide **Problem Context**
+
+     - Embed **CTA** (Retry Swap, Cancel Tx, Update Slippage, Add Token, Switch Route)
+
+     - Include **real-time or simulated data blocks** as skeleton placeholders
+
+   - Prioritize queries based on **fastest control / lowest competition / highest execution intent**
+
+   - Ensure **all execution scenarios from the final report** are represented
+
+
+
+6. **Project Output**
+
+   - Full Replit-ready structure
+
+   - Each page pre-populated with:
+
+     - Interactive tool skeleton
+
+     - SEO metadata auto-generated
+
+     - Instructions/comments for connecting real DEX APIs later
+
+   - Navigation system linking pages based on query similarity
+
+   - Placeholder integration points for:
+
+     - Ethereum (MetaMask), BSC (PancakeSwap), Solana (Phantom), Layer 2 chains
+
+   - Modular design for easy expansion with new queries
+
+
+
+---
+
+
+
+## Seed Queries (from final report)
+
+
+
+### Error-Resolution Utilities / Problem-Solving (Execution-Driven)
+
+
+
+1. Swap failed: cannot estimate gas; transaction may fail or may require manual gas limit (UNPREDICTABLE_GAS_LIMIT)  
+
+2. Unknown error: "Internal JSON-RPC error." Try increasing your slippage tolerance  
+
+3. Transaction cannot succeed due to error: execution reverted: PancakeRouter: INSUFFICIENT_OUTPUT_AMOUNT  
+
+4. Swap failed: try using higher than normal slippage  
+
+5. Phantom wallet swap failure  
+
+6. Web3 Python token sell pancakeswap slippage  
+
+7. Failed Transaction – underpriced / Replacement transaction underpriced  
+
+8. Failed MetaMask Swap Charged me $54 in gas is there anything I can do  
+
+9. Transaction reverted by the EVM Pancake swap token sale  
+
+10. How can I swap gatetoken (error) unsupported pair, low liquidity  
+
+11. Successful swap but didnt received the token in my wallet  
+
+12. Pending swap not appearing on Etherscan  
+
+13. Error: Transaction reverted: function selector was not recognized  
+
+14. Transaction reverted due to low slippage  
+
+
+
+---
+
+
+
+## Instructions for AI Execution
+
+
+
+- For **each query**, generate:
+
+  1. Full React/Next.js page skeleton
+
+  2. Components for:
+
+     - Interactive inputs
+
+     - Live/simulated on-chain data
+
+     - Action buttons
+
+     - Dynamic warnings
+
+  3. SEO metadata auto-filled with raw query + intent
+
+  4. Links to related queries/pages
+
+  5. Placeholder comments for API integration and blockchain interaction
+
+  6. Navigation integration
+
+
+
+- Ensure **all pages reflect the exact raw queries**, not paraphrased
+
+- Structure the project for **instant Replit deployment**, modular scaling, and expansion to new queries
+
+
+
+---
+
+
+
+## Output Format
+
+
+
+- `/pages/queries/<slug>.jsx` → Page per query
+
+- `/components/InteractiveTool.jsx` → Skeleton for swap, approve, cancel, slippage update
+
+- `/components/DataDashboard.jsx` → Skeleton for liquidity, gas, pool, pending tx info
+
+- `/components/WarningBanner.jsx` → Dynamic warnings based on input/blockchain state
+
+- `/components/Navigation.jsx` → Auto-linked pages per query similarity
+
+- `/utils/onChainAPI.js` → Placeholder functions for chain calls
+
+- `/seo/<slug>.js` → Auto-generated SEO metadata per page
+
+- `/README.md` → Instructions for connecting live DEX APIs, running locally, deploying
