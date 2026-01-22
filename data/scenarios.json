@@ -1,0 +1,25 @@
+{
+  "scenarios": [
+    {
+      "id": "gas-limit-error",
+      "query": "Swap failed: cannot estimate gas (UNPREDICTABLE_GAS_LIMIT)",
+      "trigger": "code=-32603, TRANSFER_FAILED",
+      "solution": "Often caused by tax tokens or low liquidity. Try setting manual gas limit to 300,000.",
+      "category": "Gas Error"
+    },
+    {
+      "id": "slippage-error",
+      "query": "PancakeRouter: INSUFFICIENT_OUTPUT_AMOUNT",
+      "trigger": "execution reverted",
+      "solution": "Increase slippage tolerance to 12% or higher for meme/tax tokens.",
+      "category": "Slippage"
+    },
+    {
+      "id": "phantom-solana-failure",
+      "query": "Phantom wallet swap failure (Solana)",
+      "trigger": "Congestion/Low Liquidity",
+      "solution": "Switch RPC endpoint or reduce transaction size during peak congestion.",
+      "category": "Network"
+    }
+  ]
+}
